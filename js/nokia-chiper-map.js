@@ -26,19 +26,21 @@ document.addEventListener("DOMContentLoaded", function () {
       { key: "99", value: "X" },
       { key: "999", value: "Y" },
       { key: "9999", value: "Z" },
-      { key: "0", value: "SPACE" }
+      { key: "0", value: "SPACE" },
+      { key: "_[0-9]", value: "NUMBER" },
+      { key: "![0-9]", value: "CAPITAL" },
     ];
 
     const mappingContainer = document.getElementById("mapping");
     mappingContainer.classList.add(
       "grid",
       "gap-4",
-      "px-4", // Padding kecil untuk semua ukuran layar
-      "grid-cols-2",  // Default untuk layar kecil (xs, sm)
-      "sm:grid-cols-2", 
-      "md:grid-cols-4", // Untuk layar sedang (md)
-      "lg:grid-cols-6", // Untuk layar besar (lg)
-      "xl:grid-cols-8"  // Untuk layar ekstra besar (xl)
+      "px-4", 
+      "grid-cols-2",  
+      "sm:grid-cols-3", 
+      "md:grid-cols-4", 
+      "lg:grid-cols-5", 
+      "xl:grid-cols-6",  
     );
     mapping.forEach(item => {
       const div = document.createElement("div");
