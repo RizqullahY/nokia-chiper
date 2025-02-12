@@ -2,6 +2,7 @@
 <div align='center'>
   <img src="https://github.com/user-attachments/assets/d9a8006e-2a22-4328-8317-6ada821f2e07" height=400/>
 </div>
+
 ## 📱 About Nokia Chiper
 **Nokia Chiper** is an encryption system based on the **T9 Keyboard** used in old Nokia phones. This system converts text into numerical combinations that resemble the way messages were typed on classic phones before the smartphone era.
 
