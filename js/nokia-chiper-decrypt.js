@@ -1,12 +1,10 @@
-import nokiaChiper from "../code/javascript";
-
-const encryptInput = document.getElementById('encryptInput');
-const encryptOutput = document.getElementById('encryptOutput');
+const decryptInput = document.getElementById('decryptInput');
+const decryptOutput = document.getElementById('decryptOutput');
 
 function updateOutput() {
-  const inputText = encryptInput.value;
-  const outputText = nokiaChiper.encrypt(inputText); 
-  encryptOutput.value = outputText;
+  const inputText = decryptInput.value;
+  const outputText = nokiaChiper.decrypt(inputText); 
+  decryptOutput.value = outputText;
 }
 
-encryptInput.addEventListener('input', updateOutput);
+decryptInput.addEventListener('input', updateOutput);

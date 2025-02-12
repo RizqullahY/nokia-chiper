@@ -30,7 +30,16 @@ document.addEventListener("DOMContentLoaded", function () {
     ];
 
     const mappingContainer = document.getElementById("mapping");
-    mappingContainer.classList.add("grid", "grid-cols-4", "lg:grid-cols-6","md:grid-cols-6", "gap-4", 'lg:px-10', );
+    mappingContainer.classList.add(
+      "grid",
+      "gap-4",
+      "px-4", // Padding kecil untuk semua ukuran layar
+      "grid-cols-2",  // Default untuk layar kecil (xs, sm)
+      "sm:grid-cols-2", 
+      "md:grid-cols-4", // Untuk layar sedang (md)
+      "lg:grid-cols-6", // Untuk layar besar (lg)
+      "xl:grid-cols-8"  // Untuk layar ekstra besar (xl)
+    );
     mapping.forEach(item => {
       const div = document.createElement("div");
       div.className = "appear-animate text-white text-lg p-2 border border-gray-400 rounded-lg text-center hover:bg-white hover:text-gray-700";

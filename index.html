@@ -66,6 +66,24 @@
           ></textarea>
         </div>
       </div>
+
+      <div id="decrypt" class="bg-gray-800 p-6 rounded-lg mb-8">
+        <h3 class="text-4xl text-white text-center mb-4">Decryption</h3>
+        <div
+          class="flex flex-col lg:flex-row items-center justify-between gap-4"
+        >
+          <textarea
+            id="decryptInput"
+            class="w-full lg:w-1/2 h-24 p-4 bg-gray-600 text-white rounded-lg mb-4 lg:mb-0"
+            placeholder="INPUT"
+          ></textarea>
+          <textarea
+            id="decryptOutput"
+            class="w-full lg:w-1/2 h-24 p-4 bg-gray-600 text-white rounded-lg mb-4 lg:mb-0"
+            placeholder="OUTPUT" readonly
+          ></textarea>
+        </div>
+      </div>
     </section>
 
     <footer class="py-6 bg-gray-800 text-center">
@@ -75,5 +93,7 @@
     </footer>
     <script src="./js/nokia-chiper-map.js"></script>
     <script src="./js/nokia-chiper-encrypt.js"></script>
+    <script src="./js/nokia-chiper-decrypt.js"></script>
+    <script src="./code/javascript.js"></script>
   </body>
 </html>
