@@ -43,7 +43,7 @@
       />
     </main>
 
-    <section class="py-4 lg:px-48">
+    <section class="py-4 lg:px-48 hidden md:block">
       <div id="mapping"></div>
     </section>
 
@@ -51,18 +51,21 @@
       <!-- Encryption Section -->
       <div id="encrypt" class="bg-gray-800 p-6 rounded-lg mb-8">
         <h3 class="text-4xl text-white text-center mb-4">Encryption</h3>
-        <div class="flex flex-col lg:flex-row items-center justify-between gap-4">
+        <div
+          class="flex flex-col lg:flex-row items-center justify-between gap-4"
+        >
           <textarea
             id="encryptInput"
             class="w-full lg:w-1/2 h-24 lg:h-32 p-4 bg-gray-600 text-white rounded-lg mb-4 lg:mb-0"
             placeholder="INPUT"
           ></textarea>
-    
+
           <div class="relative w-full lg:w-1/2">
             <textarea
               id="encryptOutput"
               class="w-full h-24 lg:h-32 p-4 bg-gray-600 text-white rounded-lg"
-              placeholder="OUTPUT" readonly
+              placeholder="OUTPUT"
+              readonly
             ></textarea>
             <button
               onclick="copyToClipboard('encryptOutput')"
@@ -73,22 +76,25 @@
           </div>
         </div>
       </div>
-    
+
       <!-- Decryption Section -->
       <div id="decrypt" class="bg-gray-800 p-6 rounded-lg mb-8">
         <h3 class="text-4xl text-white text-center mb-4">Decryption</h3>
-        <div class="flex flex-col lg:flex-row items-center justify-between gap-4">
+        <div
+          class="flex flex-col lg:flex-row items-center justify-between gap-4"
+        >
           <textarea
             id="decryptInput"
             class="w-full lg:w-1/2 h-24 lg:h-32 p-4 bg-gray-600 text-white rounded-lg mb-4 lg:mb-0"
             placeholder="INPUT"
           ></textarea>
-    
+
           <div class="relative w-full lg:w-1/2">
             <textarea
               id="decryptOutput"
               class="w-full h-24 lg:h-32 p-4 bg-gray-600 text-white rounded-lg"
-              placeholder="OUTPUT" readonly
+              placeholder="OUTPUT"
+              readonly
             ></textarea>
             <button
               onclick="copyToClipboard('decryptOutput')"
@@ -100,7 +106,27 @@
         </div>
       </div>
     </section>
-    
+
+    <div class="p-5 md:p-15 lg:p-28">
+      <div class="p-10 bg-white rounded">
+        <div id="disqus_thread"></div>
+        <script>
+          (function () {
+            var d = document,
+              s = d.createElement("script");
+            s.src = "https://workpace.disqus.com/embed.js";
+            s.setAttribute("data-timestamp", +new Date());
+            (d.head || d.body).appendChild(s);
+          })();
+        </script>
+        <noscript
+          >Please enable JavaScript to view the
+          <a href="https://disqus.com/?ref_noscript"
+            >comments powered by Disqus.</a
+          ></noscript
+        >
+      </div>
+    </div>
 
     <footer class="py-6 bg-gray-800 text-center">
       <p class="text-gray-400">
@@ -116,6 +142,5 @@
 
     <!-- Extended  -->
     <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
-
   </body>
 </html>
