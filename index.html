@@ -43,57 +43,79 @@
       />
     </main>
 
-    <section class="p-6 text-center justify-center">
-      <div id="mapping" class="justify-center text-center"></div>
+    <section class="py-4 lg:px-48">
+      <div id="mapping"></div>
     </section>
 
-    <section class="p-6 grid grid-cols-1 md:grid-cols-1 gap-8">
+    <section class="p-4 grid grid-cols-1 md:grid-cols-1 gap-8 lg:px-48">
       <!-- Encryption Section -->
       <div id="encrypt" class="bg-gray-800 p-6 rounded-lg mb-8">
         <h3 class="text-4xl text-white text-center mb-4">Encryption</h3>
-        <div
-          class="flex flex-col lg:flex-row items-center justify-between gap-4"
-        >
+        <div class="flex flex-col lg:flex-row items-center justify-between gap-4">
           <textarea
             id="encryptInput"
-            class="w-full lg:w-1/2 h-24 p-4 bg-gray-600 text-white rounded-lg mb-4 lg:mb-0"
+            class="w-full lg:w-1/2 h-24 lg:h-32 p-4 bg-gray-600 text-white rounded-lg mb-4 lg:mb-0"
             placeholder="INPUT"
           ></textarea>
-          <textarea
-            id="encryptOutput"
-            class="w-full lg:w-1/2 h-24 p-4 bg-gray-600 text-white rounded-lg mb-4 lg:mb-0"
-            placeholder="OUTPUT" readonly
-          ></textarea>
+    
+          <div class="relative w-full lg:w-1/2">
+            <textarea
+              id="encryptOutput"
+              class="w-full h-24 lg:h-32 p-4 bg-gray-600 text-white rounded-lg"
+              placeholder="OUTPUT" readonly
+            ></textarea>
+            <button
+              onclick="copyToClipboard('encryptOutput')"
+              class="absolute top-2 right-2 bg-gray-700 hover:bg-gray-500 text-white p-2 rounded-lg"
+            >
+              📋
+            </button>
+          </div>
         </div>
       </div>
-
+    
+      <!-- Decryption Section -->
       <div id="decrypt" class="bg-gray-800 p-6 rounded-lg mb-8">
         <h3 class="text-4xl text-white text-center mb-4">Decryption</h3>
-        <div
-          class="flex flex-col lg:flex-row items-center justify-between gap-4"
-        >
+        <div class="flex flex-col lg:flex-row items-center justify-between gap-4">
           <textarea
             id="decryptInput"
-            class="w-full lg:w-1/2 h-24 p-4 bg-gray-600 text-white rounded-lg mb-4 lg:mb-0"
+            class="w-full lg:w-1/2 h-24 lg:h-32 p-4 bg-gray-600 text-white rounded-lg mb-4 lg:mb-0"
             placeholder="INPUT"
           ></textarea>
-          <textarea
-            id="decryptOutput"
-            class="w-full lg:w-1/2 h-24 p-4 bg-gray-600 text-white rounded-lg mb-4 lg:mb-0"
-            placeholder="OUTPUT" readonly
-          ></textarea>
+    
+          <div class="relative w-full lg:w-1/2">
+            <textarea
+              id="decryptOutput"
+              class="w-full h-24 lg:h-32 p-4 bg-gray-600 text-white rounded-lg"
+              placeholder="OUTPUT" readonly
+            ></textarea>
+            <button
+              onclick="copyToClipboard('decryptOutput')"
+              class="absolute top-2 right-2 bg-gray-700 hover:bg-gray-500 text-white p-2 rounded-lg"
+            >
+              📋
+            </button>
+          </div>
         </div>
       </div>
     </section>
+    
 
     <footer class="py-6 bg-gray-800 text-center">
       <p class="text-gray-400">
         &copy; 2025 raflyasliGalek. All rights reserved.
       </p>
     </footer>
+
     <script src="./js/nokia-chiper-map.js"></script>
     <script src="./js/nokia-chiper-encrypt.js"></script>
     <script src="./js/nokia-chiper-decrypt.js"></script>
+    <script src="./js/main.js"></script>
     <script src="./code/javascript.js"></script>
+
+    <!-- Extended  -->
+    <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
+
   </body>
 </html>

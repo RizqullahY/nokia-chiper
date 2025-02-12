@@ -16,3 +16,7 @@
   animation-timeline: view();
   animation-range: entry 0 cover 25%;
 }
+
+html {
+  scroll-behavior: smooth;
+}

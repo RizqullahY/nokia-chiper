@@ -1,16 +1,17 @@
 {
   "dependencies": {
     "@tailwindcss/cli": "^4.0.6",
+    "sweetalert": "^2.1.2",
+    "sweetalert2": "^11.16.0",
     "tailwindcss": "^4.0.6"
   },
   "name": "nokia-chiper",
   "version": "1.0.0",
   "description": "HELLO",
   "main": "index.js",
-  "devDependencies": {},
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
-    "tcss":"npx @tailwindcss/cli -i ./css/input.css -o ./css/output.css --watch"
+    "tcss": "npx @tailwindcss/cli -i ./css/input.css -o ./css/output.css --watch"
   },
   "keywords": [],
   "author": "Rizqullah Yusuf <rizqullahyusufrafly@gmail.com>",
