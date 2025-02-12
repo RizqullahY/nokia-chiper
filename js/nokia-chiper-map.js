@@ -27,7 +27,7 @@ document.addEventListener("DOMContentLoaded", function () {
       { key: "999", value: "Y" },
       { key: "9999", value: "Z" },
       { key: "0", value: "SPACE" },
-      { key: "_[0-9]", value: "NUMBER" },
+      { key: "|[0-9]", value: "NUMBER" },
       { key: "![0-9]", value: "CAPITAL" },
     ];
 
